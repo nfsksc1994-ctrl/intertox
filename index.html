@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterTox | Toxicology & Software Solutions</title>
+    <style>
+        /* 기본 스타일 및 컬러 정의 */
+        :root {
+            --primary-color: #002366; /* 신뢰감을 주는 네이비 */
+            --accent-color: #00a8cc;  /* 분석적인 느낌의 블루 */
+            --text-dark: #333;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-dark);
+            scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+        }
+
+        /* 헤더 & 네비게이션 */
+        header {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        /* 히어로 섹션 */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #004a8d 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; }
+
+        /* 섹션 공통 스타일 */
+        .section { padding: 80px 10%; text-align: center; }
+        .section-title { font-size: 2rem; margin-bottom: 40px; color: var(--primary-color); position: relative; display: inline-block; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent-color); margin: 10px auto; }
+
+        /* 서비스 그리드 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--accent-color); margin-bottom: 15px; }
+
+        /* 결산 공고 테이블 스타일 */
+        .disclosure-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+        }
+
+        .disclosure-table th, .disclosure-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .disclosure-table th {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .disclosure-table tr:hover { background-color: #fcfcfc; }
+
+        /* 하단 푸터 */
+        footer {
+            background: #222;
+            color: #ccc;
+            padding: 40px 10%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* 반응형 설정 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">InterTox</div>
+        <nav>
+            <a href="#services">사업분야</a>
+            <a href="#tech">기술역량</a>
+            <a href="#disclosure">전자공고</a>
+            <a href="#notice">인재채용</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>InterTox</h1>
+        <p>고도의 독성학 분석과 혁신적 소프트웨어 솔루션의 결합<br>데이터를 통해 더 안전하고 명확한 가치를 설계합니다.</p>
+    </section>
+
+    <section class="section" id="services">
+        <h2 class="section-title">Core Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>독성학 컨설팅</h3>
+                <p>약독물 분석 및 전문적인 법독성 자문 서비스를 제공합니다. 복잡한 중독 사례에 대한 정밀한 해석을 지원합니다.</p>
+            </div>
+            <div class="card">
+                <h3>소프트웨어 개발</h3>
+                <p>질량 분석 데이터(Mass MS) 처리 자동화 및 연구용 GUI 애플리케이션 등 맞춤형 소프트웨어를 구축합니다.</p>
+            </div>
+            <div class="card">
+                <h3>데이터 분석 솔루션</h3>
+                <p>알고리즘 기반의 데이터 시각화 및 피크 통합 기술을 통해 데이터 처리의 정확도와 효율성을 높입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="tech" style="background-color: var(--bg-light);">
+        <h2 class="section-title">Technological Strength</h2>
+        <p>InterTox는 Python, PyQt5, VBA 등 다양한 기술 스택을 바탕으로<br>화학 분석 현장에서 실제로 작동하는 최적화된 도구를 만듭니다.</p>
+    </section>
+
+    <section class="section" id="disclosure" style="background-color: #fff;">
+        <h2 class="section-title">Public Disclosure</h2>
+        <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+            <p style="margin-bottom: 20px; color: #666; font-size: 0.95rem;">
+                주식회사 InterTox의 상법 제448조 및 당사 정관에 의거하여, 각 회계연도의 결산 결과를 아래와 같이 공고합니다.
+            </p>
+            <table class="disclosure-table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">번호</th>
+                        <th style="text-align: left; width: 55%;">공고 제목</th>
+                        <th style="width: 20%;">공시일</th>
+                        <th style="width: 15%;">자료</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td style="text-align: left; font-weight: 500;">제1기 결산 공고 (재무상태표)</td>
+                        <td>2026. 03. 06</td>
+                        <td><a href="#" style="color: var(--accent-color); text-decoration: none;">[PDF]</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section" id="notice" style="background-color: var(--bg-light);">
+        <h2 class="section-title">Notice & Career</h2>
+        <div class="notice-container" style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <div style="border-left: 4px solid var(--primary-color); padding-left: 20px; background: #fff; padding: 30px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--primary-color); margin-top: 0;">[공고] InterTox와 함께할 기술 파트너를 모십니다</h3>
+                <p style="color: #888; font-size: 0.85rem;">게시일: 2026. 03. 06</p>
+                <p>InterTox는 독성학적 통찰력과 IT 기술의 융합을 통해 새로운 가치를 창출합니다. 현재 사업 확장 단계에서 협력 파트너를 찾고 있습니다.</p>
+                
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;"><strong>• 모집 분야:</strong> 파이썬 데이터 분석 및 GUI 개발</li>
+                    <li style="margin-bottom: 8px;"><strong>• 주요 업무:</strong> 과학 데이터 시각화 툴 개발 협업</li>
+                </ul>
+                
+                <p style="margin-top: 20px;">
+                    <a href="mailto:contact@intertox.com" style="display: inline-block; padding: 10px 25px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">지원 및 문의하기</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 InterTox. All Rights Reserved.</p>
+        <p>전문성 기반의 독성학 및 소프트웨어 솔루션 파트너</p>
+    </footer>
+
+</body>
+</html>
